@@ -1,0 +1,9 @@
+model,pehe,improvement_vs_naive
+T-Learner (Linear),0.329,35.7
+T-Learner (LGBM),0.376,26.4
+T-Learner (RF),0.434,15.0
+S-Learner (Linear),0.505,1.2
+Naive ATE,0.511,0.0
+X-Learner (LGBM),0.585,-14.5
+X-Learner (Linear),0.601,-17.5
+X-Learner (RF),0.601,-17.7

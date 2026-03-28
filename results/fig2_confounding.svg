@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>
+    .bar-naive { fill: #e74c3c; }
+    .bar-t { fill: #27ae60; }
+    .axis-label { font-family: Arial; font-size: 12px; fill: #333; }
+    .title { font-family: Arial; font-size: 18px; font-weight: bold; fill: #333; }
+    .value { font-family: Arial; font-size: 11px; fill: #333; }
+    .legend { font-family: Arial; font-size: 12px; fill: #333; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Effect of Treatment Confounding on PEHE</text>
+  
+  <!-- X-axis labels -->
+  <text x="120" y="420" text-anchor="middle" class="axis-label">0.0</text>
+  <text x="220" y="420" text-anchor="middle" class="axis-label">0.3</text>
+  <text x="320" y="420" text-anchor="middle" class="axis-label">0.7</text>
+  <text x="420" y="420" text-anchor="middle" class="axis-label">0.9</text>
+  <text x="420" y="450" text-anchor="middle" class="axis-label">Confounding Level</text>
+  
+  <!-- Bars: Naive ATE -->
+  <!-- 0.0: 0.56, 0.3: 0.60, 0.7: 0.69, 0.9: 0.81 -->
+  <!-- Scale: value * 200 + 50 -->
+  <rect x="90" y="180" width="60" height="30" class="bar-naive"/>
+  <text x="120" y="200" text-anchor="middle" class="value">0.56</text>
+  
+  <rect x="190" y="168" width="60" height="30" class="bar-naive"/>
+  <text x="220" y="188" text-anchor="middle" class="value">0.60</text>
+  
+  <rect x="290" y="138" width="60" height="30" class="bar-naive"/>
+  <text x="320" y="158" text-anchor="middle" class="value">0.69</text>
+  
+  <rect x="390" y="78" width="60" height="30" class="bar-naive"/>
+  <text x="420" y="98" text-anchor="middle" class="value">0.81</text>
+  
+  <!-- Bars: T-Learner -->
+  <!-- 0.0: 0.24, 0.3: 0.19, 0.7: 0.23, 0.9: 0.22 -->
+  <rect x="90" y="288" width="60" height="30" class="bar-t"/>
+  <text x="120" y="308" text-anchor="middle" class="value">0.24</text>
+  
+  <rect x="190" y="308" width="60" height="30" class="bar-t"/>
+  <text x="220" y="328" text-anchor="middle" class="value">0.19</text>
+  
+  <rect x="290" y="294" width="60" height="30" class="bar-t"/>
+  <text x="320" y="314" text-anchor="middle" class="value">0.23</text>
+  
+  <rect x="390" y="296" width="60" height="30" class="bar-t"/>
+  <text x="420" y="316" text-anchor="middle" class="value">0.22</text>
+  
+  <!-- Axis lines -->
+  <line x1="80" y1="400" x2="480" y2="400" stroke="#333" stroke-width="1"/>
+  <line x1="80" y1="80" x2="80" y2="400" stroke="#333" stroke-width="1"/>
+  
+  <!-- Legend -->
+  <rect x="520" y="100" width="20" height="15" class="bar-naive"/>
+  <text x="550" y="112" class="legend">Naive ATE</text>
+  
+  <rect x="520" y="130" width="20" height="15" class="bar-t"/>
+  <text x="550" y="142" class="legend">T-Learner</text>
+  
+  <!-- Key insight -->
+  <text x="80" y="460" class="axis-label" style="font-size: 11px; fill: #666;">
+    Key insight: Confounding destroys Naive ATE (+44% PEHE) but T-Learner stays robust (~0.22)
+  </text>
+</svg>

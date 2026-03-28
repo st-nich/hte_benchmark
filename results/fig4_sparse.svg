@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <style>
+    .bar-t { fill: #27ae60; }
+    .bar-s { fill: #3498db; }
+    .bar-d { fill: #9b59b6; }
+    .axis-label { font-family: Arial; font-size: 12px; fill: #333; }
+    .title { font-family: Arial; font-size: 18px; font-weight: bold; fill: #333; }
+    .value { font-family: Arial; font-size: 11px; fill: #333; }
+    .legend { font-family: Arial; font-size: 12px; fill: #333; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Sparse Effects: Can We Find Who Responds?</text>
+  
+  <!-- X-axis -->
+  <text x="150" y="380" text-anchor="middle" class="axis-label">5%</text>
+  <text x="275" y="380" text-anchor="middle" class="axis-label">10%</text>
+  <text x="400" y="380" text-anchor="middle" class="axis-label">20%</text>
+  <text x="525" y="380" text-anchor="middle" class="axis-label">50%</text>
+  <text x="400" y="410" text-anchor="middle" class="axis-label">% of Population That Responds</text>
+  
+  <!-- Y-axis -->
+  <text x="60" y="200" text-anchor="middle" class="axis-label" transform="rotate(-90, 60, 200)">Precision @ 10%</text>
+  
+  <!-- Bars: T-Learner [16, 56, 90, 100] -->
+  <rect x="100" y="290" width="50" height="30" class="bar-t"/>
+  <text x="125" y="310" text-anchor="middle" class="value">16%</text>
+  
+  <rect x="225" y="180" width="50" height="30" class="bar-t"/>
+  <text x="250" y="200" text-anchor="middle" class="value">56%</text>
+  
+  <rect x="350" y="80" width="50" height="30" class="bar-t"/>
+  <text x="375" y="100" text-anchor="middle" class="value">90%</text>
+  
+  <rect x="475" y="60" width="50" height="30" class="bar-t"/>
+  <text x="500" y="80" text-anchor="middle" class="value">100%</text>
+  
+  <!-- Bars: S-Learner [0, 33, 44, 100] -->
+  <rect x="100" y="320" width="50" height="30" fill="#ddd"/>
+  <text x="125" y="340" text-anchor="middle" class="value" fill="#999">0%</text>
+  
+  <rect x="225" y="230" width="50" height="30" class="bar-s"/>
+  <text x="250" y="250" text-anchor="middle" class="value">33%</text>
+  
+  <rect x="350" y="190" width="50" height="30" class="bar-s"/>
+  <text x="375" y="210" text-anchor="middle" class="value">44%</text>
+  
+  <rect x="475" y="60" width="50" height="30" class="bar-s"/>
+  <text x="500" y="80" text-anchor="middle" class="value">100%</text>
+  
+  <!-- Bars: LinearDML [14, 57, 90, 100] -->
+  <rect x="160" y="295" width="50" height="30" class="bar-d"/>
+  <text x="185" y="315" text-anchor="middle" class="value">14%</text>
+  
+  <rect x="285" y="175" width="50" height="30" class="bar-d"/>
+  <text x="310" y="195" text-anchor="middle" class="value">57%</text>
+  
+  <rect x="410" y="80" width="50" height="30" class="bar-d"/>
+  <text x="435" y="100" text-anchor="middle" class="value">90%</text>
+  
+  <rect x="535" y="60" width="50" height="30" class="bar-d"/>
+  <text x="560" y="80" text-anchor="middle" class="value">100%</text>
+  
+  <!-- Axis lines -->
+  <line x1="80" y1="60" x2="80" y2="350" stroke="#333" stroke-width="1"/>
+  <line x1="80" y1="350" x2="620" y2="350" stroke="#333" stroke-width="1"/>
+  
+  <!-- Legend -->
+  <rect x="620" y="60" width="20" height="15" class="bar-t"/>
+  <text x="650" y="72" class="legend">T-Learner</text>
+  
+  <rect x="620" y="90" width="20" height="15" class="bar-s"/>
+  <text x="650" y="102" class="legend">S-Learner</text>
+  
+  <rect x="620" y="120" width="20" height="15" class="bar-d"/>
+  <text x="650" y="132" class="legend">LinearDML</text>
+  
+  <!-- Key insight -->
+  <text x="350" y="430" text-anchor="middle" style="font-size: 11px; fill: #666; font-family: Arial;">
+    Key insight: Need ~10%+ responders to reliably detect heterogeneity. S-Learner completely fails at 5%!
+  </text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>
+    .cell-label { font-family: Arial; font-size: 14px; fill: #fff; font-weight: bold; }
+    .axis-label { font-family: Arial; font-size: 12px; fill: #333; }
+    .title { font-family: Arial; font-size: 18px; font-weight: bold; fill: #333; }
+    .legend-label { font-family: Arial; font-size: 11px; fill: #333; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Detection Power (AUC) by Effect Size and Noise</text>
+  
+  <!-- Y-axis (Effect Size) -->
+  <text x="80" y="80" class="axis-label">2.0</text>
+  <text x="80" y="150" class="axis-label">1.0</text>
+  <text x="80" y="220" class="axis-label">0.5</text>
+  <text x="80" y="290" class="axis-label">0.2</text>
+  <text x="60" y="200" text-anchor="middle" class="axis-label" transform="rotate(-90, 60, 200)">Effect Size</text>
+  
+  <!-- X-axis (Noise) -->
+  <text x="200" y="360" text-anchor="middle" class="axis-label">0.5</text>
+  <text x="320" y="360" text-anchor="middle" class="axis-label">1.0</text>
+  <text x="440" y="360" text-anchor="middle" class="axis-label">2.0</text>
+  <text x="560" y="360" text-anchor="middle" class="axis-label">5.0</text>
+  <text x="400" y="390" text-anchor="middle" class="axis-label">Noise Std Dev</text>
+  
+  <!-- Heatmap cells: AUC values -->
+  <!-- Effect 2.0: [0.99, 0.97, 0.91, 0.76] -->
+  <rect x="170" y="60" width="100" height="60" fill="#27ae60"/>
+  <text x="220" y="98" text-anchor="middle" class="cell-label">0.99</text>
+  
+  <rect x="290" y="60" width="100" height="60" fill="#27ae60"/>
+  <text x="340" y="98" text-anchor="middle" class="cell-label">0.97</text>
+  
+  <rect x="410" y="60" width="100" height="60" fill="#f39c12"/>
+  <text x="460" y="98" text-anchor="middle" class="cell-label">0.91</text>
+  
+  <rect x="530" y="60" width="100" height="60" fill="#e67e22"/>
+  <text x="580" y="98" text-anchor="middle" class="cell-label">0.76</text>
+  
+  <!-- Effect 1.0: [0.97, 0.92, 0.81, 0.67] -->
+  <rect x="170" y="130" width="100" height="60" fill="#27ae60"/>
+  <text x="220" y="168" text-anchor="middle" class="cell-label">0.97</text>
+  
+  <rect x="290" y="130" width="100" height="60" fill="#27ae60"/>
+  <text x="340" y="168" text-anchor="middle" class="cell-label">0.92</text>
+  
+  <rect x="410" y="130" width="100" height="60" fill="#f39c12"/>
+  <text x="460" y="168" text-anchor="middle" class="cell-label">0.81</text>
+  
+  <rect x="530" y="130" width="100" height="60" fill="#e74c3c"/>
+  <text x="580" y="168" text-anchor="middle" class="cell-label">0.67</text>
+  
+  <!-- Effect 0.5: [0.93, 0.81, 0.70, 0.59] -->
+  <rect x="170" y="200" width="100" height="60" fill="#27ae60"/>
+  <text x="220" y="238" text-anchor="middle" class="cell-label">0.93</text>
+  
+  <rect x="290" y="200" width="100" height="60" fill="#f39c12"/>
+  <text x="340" y="238" text-anchor="middle" class="cell-label">0.81</text>
+  
+  <rect x="410" y="200" width="100" height="60" fill="#e74c3c"/>
+  <text x="460" y="238" text-anchor="middle" class="cell-label">0.70</text>
+  
+  <rect x="530" y="200" width="100" height="60" fill="#e74c3c"/>
+  <text x="580" y="238" text-anchor="middle" class="cell-label">0.59</text>
+  
+  <!-- Effect 0.2: [0.73, 0.65, 0.58, 0.58] -->
+  <rect x="170" y="270" width="100" height="60" fill="#f39c12"/>
+  <text x="220" y="308" text-anchor="middle" class="cell-label">0.73</text>
+  
+  <rect x="290" y="270" width="100" height="60" fill="#e74c3c"/>
+  <text x="340" y="308" text-anchor="middle" class="cell-label">0.65</text>
+  
+  <rect x="410" y="270" width="100" height="60" fill="#e74c3c"/>
+  <text x="460" y="308" text-anchor="middle" class="cell-label">0.58</text>
+  
+  <rect x="530" y="270" width="100" height="60" fill="#e74c3c"/>
+  <text x="580" y="308" text-anchor="middle" class="cell-label">0.58</text>
+  
+  <!-- Legend -->
+  <rect x="170" y="410" width="30" height="20" fill="#27ae60"/>
+  <text x="210" y="425" class="legend-label">>0.9</text>
+  
+  <rect x="270" y="410" width="30" height="20" fill="#f39c12"/>
+  <text x="310" y="425" class="legend-label">0.7-0.9</text>
+  
+  <rect x="370" y="410" width="30" height="20" fill="#e67e22"/>
+  <text x="410" y="425" class="legend-label">0.6-0.7</text>
+  
+  <rect x="470" y="410" width="30" height="20" fill="#e74c3c"/>
+  <text x="510" y="425" class="legend-label"><0.6</text>
+  
+  <!-- Key insight -->
+  <text x="400" y="470" text-anchor="middle" style="font-size: 11px; fill: #666; font-family: Arial;">
+    Key insight: Need effect > noise (SNR > 1) for reliable detection. AUC > 0.7 = acceptable detection.
+  </text>
+</svg>

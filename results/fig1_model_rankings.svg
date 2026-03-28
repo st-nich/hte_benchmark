@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>
+    .bar { fill: #3498db; }
+    .bar-good { fill: #27ae60; }
+    .bar-bad { fill: #e74c3c; }
+    .bar-medium { fill: #f39c12; }
+    .axis-label { font-family: Arial; font-size: 12px; fill: #333; }
+    .title { font-family: Arial; font-size: 18px; font-weight: bold; fill: #333; }
+    .value { font-family: Arial; font-size: 11px; fill: #333; }
+    .legend { font-family: Arial; font-size: 12px; fill: #333; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Model Rankings by PEHE (Lower = Better)</text>
+  
+  <!-- Y-axis labels -->
+  <text x="50" y="80" class="axis-label">T-Learner (Linear)</text>
+  <text x="50" y="120" class="axis-label">T-Learner (LGBM)</text>
+  <text x="50" y="160" class="axis-label">T-Learner (RF)</text>
+  <text x="50" y="200" class="axis-label">S-Learner (Linear)</text>
+  <text x="50" y="240" class="axis-label">Naive ATE</text>
+  <text x="50" y="280" class="axis-label">X-Learner (LGBM)</text>
+  <text x="50" y="320" class="axis-label">X-Learner (Linear)</text>
+  <text x="50" y="360" class="axis-label">X-Learner (RF)</text>
+  
+  <!-- Bars (scaled: PEHE * 300 + 50) -->
+  <!-- T-Learner Linear: 0.329 -->
+  <rect x="150" y="60" width="99" height="30" class="bar-good"/>
+  <text x="260" y="80" class="value">0.329</text>
+  
+  <!-- T-Learner LGBM: 0.376 -->
+  <rect x="150" y="100" width="113" height="30" class="bar-good"/>
+  <text x="270" y="120" class="value">0.376</text>
+  
+  <!-- T-Learner RF: 0.434 -->
+  <rect x="150" y="140" width="130" height="30" class="bar-medium"/>
+  <text x="290" y="160" class="value">0.434</text>
+  
+  <!-- S-Learner: 0.505 -->
+  <rect x="150" y="180" width="152" height="30" class="bar"/>
+  <text x="310" y="200" class="value">0.505</text>
+  
+  <!-- Naive: 0.511 -->
+  <rect x="150" y="220" width="153" height="30" class="bar"/>
+  <text x="310" y="240" class="value">0.511</text>
+  
+  <!-- X-Learner LGBM: 0.585 -->
+  <rect x="150" y="260" width="176" height="30" class="bar-bad"/>
+  <text x="335" y="280" class="value">0.585</text>
+  
+  <!-- X-Learner Linear: 0.601 -->
+  <rect x="150" y="300" width="180" height="30" class="bar-bad"/>
+  <text x="340" y="320" class="value">0.601</text>
+  
+  <!-- X-Learner RF: 0.601 -->
+  <rect x="150" y="340" width="180" height="30" class="bar-bad"/>
+  <text x="340" y="360" class="value">0.601</text>
+  
+  <!-- X-axis -->
+  <line x1="150" y1="400" x2="600" y2="400" stroke="#333" stroke-width="1"/>
+  <text x="150" y="420" class="axis-label">0.0</text>
+  <text x="300" y="420" class="axis-label">0.3</text>
+  <text x="450" y="420" class="axis-label">0.6</text>
+  <text x="600" y="420" class="axis-label">0.9</text>
+  <text x="400" y="450" text-anchor="middle" class="axis-label">PEHE</text>
+  
+  <!-- Legend -->
+  <rect x="450" y="50" width="15" height="15" class="bar-good"/>
+  <text x="475" y="62" class="legend">Good</text>
+  <rect x="520" y="50" width="15" height="15" class="bar"/>
+  <text x="545" y="62" class="legend">Moderate</text>
+  <rect x="600" y="50" width="15" height="15" class="bar-bad"/>
+  <text x="625" y="62" class="legend">Poor</text>
+</svg>

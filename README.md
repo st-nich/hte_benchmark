@@ -105,7 +105,7 @@ If you use this work, please cite:
   title = {HTE Benchmark for A/B Testing},
   author = {Research Team},
   year = {2026},
-  url = {https://github.com/your-repo/hte-benchmark}
+  url = {https://github.com/st-nich/hte_benchmark}
 }
 ```
 
